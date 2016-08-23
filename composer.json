@@ -1,0 +1,30 @@
+{
+    "name": "galvao/comphpartment",
+    "type": "library",
+    "description": "Pocket's API access through PHP and Guzzle.",
+    "version": "0.1.0-alpha",
+    "keywords": ["pocket","api"],
+    "homepage": "https://github.com/galvao/comphpartment",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Er Galvão Abbott",
+            "email": "galvao@php.net",
+            "homepage": "http://www.galvao.eti.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.6",
+        "monolog/monolog": "^1.21",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": { 
+        "phpdocumentor/phpdocumentor": "2.*" 
+    },
+    "autoload": {
+        "psr-4": {
+            "ComPHPartment\\": "src"
+        }
+    }
+}
