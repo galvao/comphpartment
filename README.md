@@ -1,4 +1,4 @@
-![ComPHPartment's Logo](https://github.com/galvao/comphpartment/media/comphpartmentLogo_300x45.png)
+![ComPHPartment's Logo](https://raw.githubusercontent.com/galvao/comphpartment/master/media/compartmentLogo_300x45.png)
 
 # ComPHPartment
 ## Pocket's API access through PHP and Guzzle
