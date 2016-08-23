@@ -20,7 +20,7 @@ ComPHPartment is a component designed to provide access to [Pocket](https://getp
 - [ ] Add Tags;
 - [ ] Remove Tags;
 
-For more information see the issues page.
+For more information see the [issues](https://github.com/galvao/comphpartment/issues) page.
 
 ### Installation
 
@@ -31,7 +31,7 @@ $ composer require galvao/comphpartment:0.1.0-alpha
 ```
 #### Requirements:
 
-ComPHPartment uses Guzzle for performing the API access and Monolog for logging the entire process.
+ComPHPartment uses [Guzzle](https://github.com/guzzle/guzzle) for performing the API access and [Monolog](https://github.com/Seldaek/monolog) for logging the entire process.
 
 ### Usage
 
@@ -39,22 +39,12 @@ ComPHPartment uses Guzzle for performing the API access and Monolog for logging 
 2. Paste that key at config.json.dist and save it as config.json;
 3. See a full working example at the public-example folder.
 
-### Documentation
-
-See [here]() for the PHPDocumentor's generated documentation.
-
 ### Contributing / ToDo
 
 #### Contributors
 
-See the Contributors page. Thanks for everyone who pitches in! =)
 All issues, being enhancements, bugs, etc... must be filled through the issues page.
 
 #### Contributing Guidelines
 
 1. All code must be compliant to PSRs #1, #2 and #4
-
-### Help needed at the following:
-
-1. Tests: Automated testing is not between my strong suits, so I'd really appreciate if someone could give me some help at that area (Unit Testing, etc...).
-2. Implementing a solid, PSR-6 compliant caching solution.
