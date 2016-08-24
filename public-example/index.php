@@ -1,7 +1,7 @@
 <?php
 require 'init.php';
 
-ComPHPartment\ComPHPartment::$redirectURI = 'http://comphpartment/dashboard.php';
+ComPHPartment\ComPHPartment::$redirectURI = 'http://' . $_SERVER['SERVER_NAME'] . '/dashboard.php';
 
 $comPHPartment->authenticate();
 $_SESSION['token'] = $comPHPartment->token;
