@@ -1,4 +1,14 @@
 <?php
+/**
+ * LogWrapper - A wrapper for Monolog to be used by ComPHPartment.
+ *
+ * @package ComPHPartment\LogWrapper
+ * @author Er Galvão Abbott <galvao@php.net>
+ * @see https://github.com/galvao/comphpartment
+ * @version 0.1.0-alpha
+ * @license BSD
+ */
+
 namespace ComPHPartment\LogWrapper;
 
 use Monolog\Logger;
@@ -10,15 +20,23 @@ use ComPHPartment\ComPHPartment;
 
 class LogWrapper
 {
+    /** Log base path */
     const LOG_PATH = '/data/log';
 
+    /** @var string $logFile File to be used to log occurrences */
     public static $logFile;
+
+    /** @var array $loggers What ComPHPartment should consider to be valid loggers */
     public static $loggers = [
         'execution' => true,
         'error'     => true,
         'request'   => false,
     ];
 
+    /**
+     * setLoggers - Sets (instantiates) the desired loggers
+     * @since 0.1.0-alpha
+     */
     public static function setLoggers()
     {
         $tsFormat = date('H:i:s');
@@ -40,8 +58,17 @@ class LogWrapper
             }
         }
 
+        /** @todo Check if there's a need to register the ErrorHandler every time */
         ErrorHandler::register(self::$loggers['error']);
     }
+
+    /**
+     * getLogger - Gets a specific logger
+     * @param string $loggerName The name (index) of the desired logger
+     * @throws \Exception If the desired logger is invalid according to the loggers array
+     * @return \Monolog\Logger The desired Monolog instance
+     * @since 0.1.0-alpha
+     */
 
     public static function getLogger($loggerName = 'execution')
     {

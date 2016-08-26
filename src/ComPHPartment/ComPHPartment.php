@@ -1,19 +1,20 @@
 <?php
+/**
+ * ComPHPartment - Pocket's API access through PHP + Guzzle.
+ *
+ * @package ComPHPartment
+ * @author Er Galvão Abbott <galvao@php.net>
+ * @see https://github.com/galvao/comphpartment
+ * @version 0.1.0-alpha
+ * @license BSD
+ */
+
 namespace ComPHPartment;
 
 use ComPHPartment\LogWrapper\LogWrapper;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-
-/**
- * ComPHPartment - Pocket's API access through PHP + Guzzle
- * @package ComPHPartment
- * @author Er Galvão Abbott <galvao@php.net>
- * @see https://github.com/galvao/comphpartment
- * @version 1.0.0-alpha
- * @license BSD
- */
 
 class ComPHPartment
 {
@@ -37,17 +38,21 @@ class ComPHPartment
     /** @var string $basePath The base path for the entire application*/
     public static $basePath;
 
-    /**
-     * Constants related to the Pocket API
-     */
-
+    /** API Version */
     const POCKET_API_VERSION        = 3;
+    /** Base URI */
     const POCKET_BASE_URI           = 'https://getpocket.com';
+    /** Authentication URI */
     const POCKET_AUTHENTICATION_URI = '/v' . self::POCKET_API_VERSION . '/oauth/request';
+    /** Authorization URI */
     const POCKET_AUTHORIZATION_URI  = '/auth/authorize';
+    /** URI to get the "final" Access Token to the API */
     const POCKET_TOKEN_URI          = '/v' . self::POCKET_API_VERSION . '/oauth/authorize';
+    /** URI for retrieving Content */
     const POCKET_GET_URI            = '/v' . self::POCKET_API_VERSION . '/get';
+    /** URI for creating Content */
     const POCKET_ADD_URI            = '/v' . self::POCKET_API_VERSION . '/add';
+    /** URI for updating Content */
     const POCKET_MOD_URI            = '/v' . self::POCKET_API_VERSION . '/send';
 
     /**
